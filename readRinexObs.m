@@ -180,22 +180,22 @@ while(~feof(idFile))                                                        % Un
                 data = [gpsWeek, currentEpoch,currentFlag,prn,measurementsValue];   % store data
                 obs.gps{nObs.gps} = real(data);
                 nObs.gps= nObs.gps+1;
-            case 'R'
+            case 'R' % GLONASS
                 prn = prn+2000;
                 data = [gpsWeek, currentEpoch,currentFlag,prn,measurementsValue];   % store data
                 obs.glonass{nObs.glonass} = real(data);
                 nObs.glonass= nObs.glonass+1;
-            case 'S'
+            case 'S' % GEO
                 prn = prn+3000;
                 data = [gpsWeek, currentEpoch,currentFlag,prn,measurementsValue];   % store data
                 obs.sbas{nObs.sbas} = real(data);
                 nObs.sbas= nObs.sbas+1;
-            case 'E'
+            case 'E' % GALILEO
                 prn = prn+4000;
                 data = [gpsWeek, currentEpoch,currentFlag,prn,measurementsValue];   % store data
-                obs.galileo{nObs.sbas} = real(data);
+                obs.galileo{nObs.galileo} = real(data);
                 nObs.galileo= nObs.galileo+1;
-            case 'C'
+            case 'C' % BEIDOU
                 prn = prn+5000;
                 data = [gpsWeek, currentEpoch,currentFlag,prn,measurementsValue];   % store data
                 obs.beidou{nObs.beidou} = real(data);
